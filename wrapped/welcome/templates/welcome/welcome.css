@@ -1,4 +1,9 @@
-/* Login */
+body {
+    overflow: hidden;
+}
+
+
+* Login */
 .login {position: relative;
 width: 1512px;
 height: 982px;
