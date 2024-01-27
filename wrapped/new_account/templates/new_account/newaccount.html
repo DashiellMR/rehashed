@@ -15,45 +15,19 @@
     <div class="vector4"></div>
     <div class="vector5"></div>
     <div class="vector5"></div>
-    <form class="box">
+    
+    <form method="post" class="box" action="{% url 'register' %}">
+        {% csrf_token %}
         <h2>New Account</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        {{ form.username.label_tag }} {{ form.username }}
         <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        {{ form.password.label_tag }} {{ form.password }}
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        {{ form.email.label_tag }} {{ form.email }}
         <br>
-        <label for="number">Phone Number:</label>
-        <input type="number" id="number" name="number" required>
+        {{ form.phone_number.label_tag }} {{ form.phone_number }}
         <br>
-        <br>
-        <label for="category">Categories:</label>
-        <br>
-        <input type="checkbox" id="fitness" name="fitness" value="Fitness">
-        <label for="category1">Fitness</label><br>
-
-        <input type="checkbox" id="partying" name="partying" value="Partying">
-        <label for="category2">Partying</label><br>
-
-        <input type="checkbox" id="cooking" name="cooking" value="Cooking">
-        <label for="category3">Cooking</label><br>
-
-        <input type="checkbox" id="studying" name="studying" value="Studying">
-        <label for="category1">Studying</label><br>
-
-        <input type="checkbox" id="tears" name="tears" value="Tears">
-        <label for="category1">Tears</label><br>
-
-        <input type="checkbox" id="relationships" name="relationships" value="Relationships">
-        <label for="category1">Relationships</label><br>
-
-        <input type="checkbox" id="gaming" name="gaming" value="Gaming">
-        <label for="category1">Gaming</label>
-        <br>
-        <br>
+        <!-- Add other form fields here -->
         <button type="submit">Create Account</button>
     </form>
 </body>

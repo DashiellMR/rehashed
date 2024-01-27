@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import new_account_page
+from .views import register_account, success
+
 
 urlpatterns = [
-    path("", new_account_page, name='new_account'),
+    path('register/', register_account, name='register'),
+    path('success/', success, name='success')
 ]
