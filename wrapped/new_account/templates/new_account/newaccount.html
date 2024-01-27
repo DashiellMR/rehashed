@@ -20,14 +20,16 @@
         {% csrf_token %}
         <h2>New Account</h2>
         {{ form.username.label_tag }} {{ form.username }}
+        {{ form.username.errors }}
         <br>
         {{ form.password.label_tag }} {{ form.password }}
         <br>
         {{ form.email.label_tag }} {{ form.email }}
+        {{ form.email.errors }}
         <br>
         {{ form.phone_number.label_tag }} {{ form.phone_number }}
+        {{ form.phone_number.errors }}
         <br>
-        <!-- Add other form fields here -->
         <button type="submit">Create Account</button>
     </form>
 </body>
