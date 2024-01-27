@@ -20,7 +20,6 @@ filter: blur(100px);
 transform: rotate(55.38deg);
 }
 
-
 /* Vector */
 
 .vector2 {position: absolute;
@@ -36,15 +35,18 @@ transform: rotate(169.49deg);
 
 /* Vector */
 
-.vector3 {position: absolute;
+.vector3 {
+position: absolute;
 width: 662.75px;
 height: 627.78px;
-left: 269.58px;
-top: -389px;
+left: 165.58px;
+top: -466px;
+
 background: #FF9E9E;
 filter: blur(75px);
 transform: rotate(38.59deg);
 }
+
 
 /* Vector */
 
@@ -127,5 +129,3 @@ filter: blur(100px);
     color: #000000;
     margin-top: 100px;
 }
-
-

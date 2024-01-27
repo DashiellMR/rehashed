@@ -1,0 +1,473 @@
+/* New Account */
+
+.account {position: relative;
+width: 1512px;
+height: 982px;
+background: #FFFFFF;
+}
+
+/* Vector */
+.vector1 {position: absolute;
+    width: 616.61px;
+    height: 649.27px;
+    left: 69.33px;
+    top: 230px;
+    background: #FFD585;
+    filter: blur(100px);
+    transform: rotate(55.38deg);
+    }
+    
+    
+    /* Vector */
+    
+    .vector2 {position: absolute;
+    width: 807px;
+    height: 533px;
+    left: 1712.7px;
+    top: 385.05px;
+    background: #D6ECCB;
+    filter: blur(100px);
+    transform: rotate(169.49deg);
+    }
+    
+    
+    /* Vector */
+    
+    .vector3 {position: absolute;
+    width: 662.75px;
+    height: 627.78px;
+    left: 269.58px;
+    top: -389px;
+    background: #FF9E9E;
+    filter: blur(75px);
+    transform: rotate(38.59deg);
+    }
+    
+    /* Vector */
+    
+    .vector4 {position: absolute;
+    width: 646px;
+    height: 636px;
+    left: 142px;
+    top: 593px;
+    background: #EED9F8;
+    filter: blur(100px);
+    }
+    
+    /* Vector */
+    
+    .vector5 {position: absolute;
+    width: 570px;
+    height: 694px;
+    left: 527px;
+    top: 135px;
+    background: #94A5E2;
+    filter: blur(100px);
+    }
+    
+    /* Vector */
+    
+    .vector6 {position: absolute;
+    width: 723px;
+    height: 535px;
+    left: 1030px;
+    top: 416px;
+    background: #D9F8F2;
+    filter: blur(100px);
+    }
+
+
+/* Rectangle 14 */
+.box{ position: absolute;
+width: 725px;
+height: 830px;
+left: 393px;
+top: 76px;
+background: #FFFFFF;
+box-shadow: 0px 4px 25px 2px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+
+/* New Account */
+
+position: absolute;
+width: 253px;
+height: 50px;
+left: 440px;
+top: 111px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+
+color: #000000;
+
+
+
+/* Select Categories */
+
+position: absolute;
+width: 349px;
+height: 50px;
+left: 440px;
+top: 515px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+
+color: #000000;
+
+
+
+/* Rectangle 15 */
+
+position: absolute;
+width: 155px;
+height: 67px;
+left: 440px;
+top: 583px;
+
+background: #D9F8F2;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Food 🍰 */
+
+position: absolute;
+width: 90px;
+height: 30px;
+left: 482px;
+top: 602px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 16 */
+
+position: absolute;
+width: 177px;
+height: 67px;
+left: 635px;
+top: 583px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Gaming 🎮 */
+
+position: absolute;
+width: 122px;
+height: 30px;
+left: 670px;
+top: 602px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 17 */
+
+position: absolute;
+width: 214px;
+height: 67px;
+left: 857px;
+top: 583px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Studying 📚 */
+
+position: absolute;
+width: 138px;
+height: 30px;
+left: 899px;
+top: 602px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 18 */
+
+position: absolute;
+width: 155px;
+height: 67px;
+left: 440px;
+top: 682px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Tears 🥲 */
+
+position: absolute;
+width: 100px;
+height: 30px;
+left: 472px;
+top: 701px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 19 */
+
+position: absolute;
+width: 218px;
+height: 67px;
+left: 628px;
+top: 682px;
+
+background: #D9F8F2;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Relationships 😘 */
+
+position: absolute;
+width: 192px;
+height: 30px;
+left: 650px;
+top: 701px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 20 */
+
+position: absolute;
+width: 193px;
+height: 67px;
+left: 440px;
+top: 786px;
+
+background: #D9F8F2;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Partying 🥳 */
+
+position: absolute;
+width: 135px;
+height: 30px;
+left: 468px;
+top: 805px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 21 */
+
+position: absolute;
+width: 164px;
+height: 67px;
+left: 879px;
+top: 682px;
+
+background: #D9F8F2;
+box-shadow: 0px 4px 5px 1px rgba(102, 102, 102, 0.25);
+border-radius: 10px;
+
+
+/* Fitness 💪 */
+
+position: absolute;
+width: 116px;
+height: 30px;
+left: 904px;
+top: 701px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+
+/* Rectangle 22 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 626px;
+height: 52px;
+left: 440px;
+top: 174px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 5px;
+
+
+/* Rectangle 23 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 626px;
+height: 52px;
+left: 440px;
+top: 260px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 5px;
+
+
+/* Rectangle 24 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 626px;
+height: 52px;
+left: 440px;
+top: 344px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 5px;
+
+
+/* First Name */
+
+position: absolute;
+width: 298px;
+height: 30px;
+left: 457px;
+top: 187px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #CFCECE;
+
+
+
+/* Last Name */
+
+position: absolute;
+width: 298px;
+height: 30px;
+left: 456px;
+top: 271px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #CFCECE;
+
+
+
+/* Email Address */
+
+position: absolute;
+width: 298px;
+height: 30px;
+left: 458px;
+top: 355px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #CFCECE;
+
+
+
+/* Rectangle 25 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 626px;
+height: 52px;
+left: 440px;
+top: 428px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 5px;
+
+
+/* Phone Number */
+
+position: absolute;
+width: 351px;
+height: 30px;
+left: 458px;
+top: 439px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #CFCECE;
+
