@@ -1,9 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class UserAccount(models.Model):
-    username = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length=15)
-    # Categories can be stored as a ManyToManyField if they are a separate model,
-    # or as a TextField with comma-separated values, depending on your design
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone_number = models.CharField(max_length=15, blank=True)
+
+    def __str__(self):
+        return self.user.username

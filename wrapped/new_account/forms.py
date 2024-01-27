@@ -1,30 +1,18 @@
-from django.core.exceptions import ValidationError
-from django.forms import ModelForm
-from .models import UserAccount
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from .models import UserProfile
 
-class UserAccountForm(ModelForm):
+class UserAccountForm(UserCreationForm):
+    phone_number = forms.CharField(max_length=15, required=False)
+
     class Meta:
-        model = UserAccount
-        fields = ['username', 'password', 'email', 'phone_number']
-        widgets = {
-            'password': forms.PasswordInput(),
-        }
+        model = User
+        fields = ('username', 'email', 'password1', 'password2')
 
-    def clean_username(self):
-        username = self.cleaned_data['username']
-        if UserAccount.objects.filter(username=username).exists():
-            raise ValidationError("Username already exists.")
-        return username
-    
-    def clean_email(self):
-        email = self.cleaned_data['email']
-        if UserAccount.objects.filter(email=email).exists():
-            raise ValidationError("Email is already in use.")
-        return email
-    
-    def clean_phone_number(self):
-        phone_number = self.cleaned_data['phone_number']
-        if UserAccount.objects.filter(phone_number=phone_number).exists():
-            raise ValidationError("Phone number is already in use.")
-        return phone_number
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        if commit:
+            user.save()
+            UserProfile.objects.create(user=user, phone_number=self.cleaned_data['phone_number'])
+        return user
