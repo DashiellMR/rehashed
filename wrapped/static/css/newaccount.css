@@ -121,7 +121,7 @@ body {
     
     .categoriesdiv {
         position: absolute;
-        top: 50%; /* Adjusted to center vertically */
+        top: 60%; /* Adjusted to center vertically */
         left: 15%;
         font-family: 'Inter';
         font-style: normal;
@@ -129,25 +129,17 @@ body {
         font-size: 12px;
         line-height: 44px;
         text-align: center;
-<<<<<<< HEAD
-        color: #000000;
-        display: flex; /* Use flex container */
-        flex-direction: row; /* Display in a row */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-=======
         width: 100%;  /* Adjust the width as needed */
         text-align: center;
         left: -10px;
->>>>>>> 24fe670a8782458e4797941e1c335387cec6b6f9
     }
 
     .createbutton {
         box-sizing: border-box;
         position: absolute;
         width: auto; /* Adjust as needed */
-        height: 50px;
-        bottom: 30px;
+        height: 40px;
+        bottom: 20px;
         right: 42%;
         background: #FFFFFF;
         border: 1px solid #000000;
@@ -156,7 +148,7 @@ body {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 29px;
         color: #000000;
     }
