@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import wrapped_page
+from .views import wrapped_view
 
 urlpatterns = [
-    path("", wrapped_page, name='wrapped_page'),
+    path("", wrapped_view, name='wrapped_page'),
 ]
