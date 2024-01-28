@@ -46,7 +46,7 @@ def wrapped_view(request):
         pub_or_priv = 'public'
     elif priv_num > pub_num:
         pub_or_priv = 'private'
-    else: pub_or_priv = 'both equal'
+    else: pub_or_priv = 'public'
 
     pub_or_priv_num = max(pub_num, priv_num)
     
