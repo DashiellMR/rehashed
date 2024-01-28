@@ -3,62 +3,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Submission Form</title>  
+    <link rel="stylesheet" href="{% static 'css/journal.css' %}">
 </head>
 <body>
-    <form>
-        <h2>Add your entry</h2>
-        <div class="entry">
-            {% for entry in entries %}
-                <p>
+<div id="submit-btn">
+    <button>Submit</button>
+</div>
+
+<form>
+{% for category in categories %}
+    {% if category == "tears" %}
+    <div class="wrapper">
+        <div class="category">
+            Questions for Tears
+            <div class="form">
+                <div class="input-box">
+                    <label>Today's Date</label>
                     <br>
+                    <input required="" placeholder="Enter today's date" type="date">
+                </div>
+                <div class="input-box">
+                    <label>How many times did you cry today?</label>
                     <br>
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+                <div class="input-box">
+                    <label>What was the total amount of time you cried today (in minutes)?</label>
                     <br>
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                    {% if entry.category == "something" %}
-                        <!-- Your code for the condition "something" -->
-                        <!-- For example: -->
-                        <p>This entry has a special condition!</p>
-                    {% endif %}
-                </p>
-            {% endfor %}
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+                <div class="ppbox">
+                    <label>Did you mostly cry in public or in private?</label>
+                    <div class="ppoption">
+                        <div class="public-private">
+                            <input checked="" name="public-private" id="check-public" type="radio">
+                            <label for="check-public">Public</label>
+                        </div>
+                        <div class="public-private">
+                            <input checked="" name="public-private" id="check-private" type="radio">
+                            <label for="check-private">Private</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="reason-for-cry">
+                    <label for ="reasons">What was the main rearson for your cries?</label>
+                    <br>
+                    <select id="reasons">
+                        <option value="reasons">Select reason&hellip;</option>
+                        <option value="happy">Happy tears ftw!</option>
+                        <option value="sad">Something I watched made me cry</option>
+                        <option value="hurt">Someone hurted you :(</option>
+                        <option value="school">School is being rough and tough</option>
+                        <option value="no-reason">You cried for absolutely no reason</option>
+                    </select>
+                </div>
+                <div class="rating-box">
+                    <label>How bad were your cries today?</label>
+                    <div class="rate-option">
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-1" type="radio">
+                            <label for="check-1">1 - couple of tears no biggie</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-2" type="radio">
+                            <label for="check-2">2 - okay that kind of hurt but we move on</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-3" type="radio">
+                            <label for="check-3">3 - some tissues were needed</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-4" type="radio">
+                            <label for="check-4">4 - the snotty, painful type of cry</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-5" type="radio">
+                            <label for="check-5">5 - screaming, crying, and throwing up</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>How many people watched you cry LOL?</label>
+                    <br>
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+            </div>
         </div>
-        <h2>Hello {{ username }}.......</h2>
-        {%for category in categories %}
-        <h2>how much {{ category }} did u do today...</h2>
-        {% endfor %}
-        <button type="submit">Submit Entry</button>
-    </form>
+    </div>
+    {% endif %}
+    {% if category == "partying" %}
+    <div class="wrapper2">
+        <div class="category">
+            Questions from Partying Category
+            <div class="form">
+                <div class="input-box">
+                    <label>Today's Date</label>
+                    <br>
+                    <input required="" placeholder="Enter today's date" type="date">
+                </div>
+                <div class="input-box">
+                    <label>How many times did you cry today?</label>
+                    <br>
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+                <div class="input-box">
+                    <label>What was the total amount of time you cried today (in minutes)?</label>
+                    <br>
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+                <div class="ppbox">
+                    <label>Did you mostly cry in public or in private?</label>
+                    <div class="ppoption">
+                        <div class="public-private">
+                            <input checked="" name="public-private" id="check-public" type="radio">
+                            <label for="check-public">Public</label>
+                        </div>
+                        <div class="public-private">
+                            <input checked="" name="public-private" id="check-private" type="radio">
+                            <label for="check-private">Private</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="reason-for-cry">
+                    <label for ="reasons">What was the main rearson for your cries?</label>
+                    <br>
+                    <select id="reasons">
+                        <option value="reasons">Select reason&hellip;</option>
+                        <option value="happy">Happy tears ftw!</option>
+                        <option value="sad">Something I watched made me cry</option>
+                        <option value="hurt">Someone hurted you :(</option>
+                        <option value="school">School is being rough and tough</option>
+                        <option value="no-reason">You cried for absolutely no reason</option>
+                    </select>
+                </div>
+                <div class="rating-box">
+                    <label>How bad were your cries today?</label>
+                    <div class="rate-option">
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-1" type="radio">
+                            <label for="check-1">1 - couple of tears no biggie</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-2" type="radio">
+                            <label for="check-2">2 - okay that kind of hurt but we move on</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-3" type="radio">
+                            <label for="check-3">3 - some tissues were needed</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-4" type="radio">
+                            <label for="check-4">4 - the snotty, painful type of cry</label>
+                        </div>
+                        <div class="rate">
+                            <input checked="" name="rate" id="check-5" type="radio">
+                            <label for="check-5">5 - screaming, crying, and throwing up</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>How many people watched you cry LOL?</label>
+                    <br>
+                    <input required="" placeholder="Enter a number" type="number">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+
+
+{% endfor %}
+</form>
 </body>
 </html>

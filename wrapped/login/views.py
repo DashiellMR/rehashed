@@ -1,7 +1,6 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-
 from new_account.models import UserProfile
 from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
@@ -20,7 +19,7 @@ def login_view(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('account')
+                return redirect('login:account')
             else:
                 messages.error(request, "Username or password is not correct.")
         else:
@@ -33,11 +32,9 @@ def login_view(request):
 @login_required
 def accounts_view(request):
     user = request.user
-    user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
+    user_profile = get_object_or_404(UserProfile, user=user)
 
-    # Split categories into a list if they exist, else provide an empty list
     categories = user_profile.categories.split(',') if user_profile.categories else []
-    print(categories)
     return render(request, 'login/account.html', {
         'username': user.username,
         'email': user.email,

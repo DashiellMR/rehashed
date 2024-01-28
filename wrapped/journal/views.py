@@ -9,8 +9,6 @@ from django.contrib import messages
 def journal_page(request):
     user = request.user
     user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
-    
-    
     categories = user_profile.categories.split(',') if user_profile.categories else []
     return render(request, 'journal/journal.html', {
         'username': user.username,

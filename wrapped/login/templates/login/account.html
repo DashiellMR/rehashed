@@ -21,11 +21,11 @@
             <h5>Email: {{ user.email }}</h5>
             <h5>Categories: {{categories|join:", "|capfirst}}</h5>
         </div>
-        <form action="{% url 'logout' %}" method="post">
+        <form action="{% url 'login:logout' %}" method="post">
             {% csrf_token %}
             <button type="submit" class="logoutbutton">Log Out</button>
         </form>
-        <button class="entrybutton"onclick="window.location.href='{% url 'journal' %}'">Create an Entry</button> 
+        <button class="entrybutton"onclick="window.location.href='{% url 'journal:journal' %}'">Create an Entry</button> 
         <button class="wrappedbutton"onclick="window.location.href='{% url 'wrapped_page' %}'">Life Wrapped</button>
     </div>
     <button class="entrybutton">Create an Entry</button>

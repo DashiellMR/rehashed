@@ -8,16 +8,10 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
 </head>
-<body class="login">
-    <div class="vector1"></div>
-    <div class="vector2"></div>
-    <div class="vector3"></div>
-    <div class="vector4"></div>
-    <div class="vector5"></div>
-    <div class="vector5"></div>
-    <div class="box">
-        <button class="return" onclick="window.location.href='{% url 'login' %}'">Login</button>
-        <button class="new" onclick="window.location.href='{% url 'register' %}'">New Account</button>
+<body>
+    <div class="wrapper">
+        <button class="return" onclick="window.location.href='{% url 'login:login' %}'">Login</button>
+        <button class="new" onclick="window.location.href='{% url 'new_account:register' %}'">New Account</button>
     </div>
 </body>
 </html>
