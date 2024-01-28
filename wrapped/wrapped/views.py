@@ -11,12 +11,7 @@ def wrapped_view(request):
     user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
 
     categories = user_profile.categories.split(',') if user_profile.categories else []
-<<<<<<< HEAD
-    print(categories)
-    return render(request, '/wrapped/wrapped.html', {
-=======
     return render(request, 'wrapped/wrapped.html', {
->>>>>>> 85bb816695033e2d7f586e6e1af9d56575f3fb2c
         'username': user.username,
         'email': user.email,
         'categories': categories

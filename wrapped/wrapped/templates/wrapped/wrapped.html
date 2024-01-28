@@ -15,8 +15,18 @@
     <div class="vector5"></div>
     <div class="wrapper">
         <h2>let's WRAP up {{ username }}'s life...</h2>
-        <h5> Categories:</h5>
-        <h5>{{categories|join:", "|capfirst}}</h5>
+        <h3> Categories:</h3>
+        {% for category in categories %}
+        {% if category == "tears" %}
+            <h4>You have shed {{ category }} today</h4>
+        {% endif %}
+        {% if category == "gaming" %}
+            <h4>You have been {{ category }} today</h4>
+        {% endif %} 
+        {% if category == "partying" %}
+            <h4>Woo! You have been {{ category }} hard today</h4>
+        {% endif %} 
+    {% endfor %}
     </div>
 </body>
 </html>
