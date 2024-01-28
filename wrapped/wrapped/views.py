@@ -17,7 +17,7 @@ def wrapped_view(request):
     # Split categories into a list if they exist, else provide an empty list
     categories = user_profile.categories.split(',') if user_profile.categories else []
     print(categories)
-    return render(request, 'wrapped.html', {
+    return render(request, '/wrapped/wrapped.html', {
         'username': user.username,
         'email': user.email,
         'categories': categories
