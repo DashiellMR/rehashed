@@ -28,12 +28,14 @@
         <br>
         {{ form.phone_number.label_tag }} {{ form.phone_number }}
         <br>
+        {{ form.categories.label_tag }} {{ form.categories }}
+        <br>
         <button type="submit">Create Account</button>
         {{ form.username.errors }}
         {{ form.email.errors }}
         {{ form.password2.errors }}
         {{ form.phone_number.errors }}
+        {{ form.categories.errors }}
     </form>
-    
 </body>
 </html>
