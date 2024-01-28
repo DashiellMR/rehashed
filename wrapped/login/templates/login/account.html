@@ -16,13 +16,8 @@
     <div class="box">
         <h1>My Account:</h1>
         <div>
-            <h5>Username: {{ username }}</h5>
-            <h5>Email: {{ email }}</h5>
-            <!-- If categories are a list or queryset, loop through them to display -->
-            <!-- <h5>Categories Chosen:</h5>
-            {% for category in categories %}
-                <p>{{ category }}</p>
-            {% endfor %} -->
+            <h5>Username: {{ user.username }}</h5>
+            <h5>Email: {{ user.email }}</h5>
         </div>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
