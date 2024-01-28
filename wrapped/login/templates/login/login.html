@@ -2,24 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- ... -->
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body class="login">
-    <div class="vector1"></div>
-    <div class="vector2"></div>
-    <div class="vector3"></div>
-    <div class="vector4"></div>
-    <div class="vector5"></div>
+    <!-- ... -->
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
     <form method="post" class="box" action="{% url 'login' %}">
+        {% csrf_token %}
         <h2>Welcome Back!</h2>
-        <input type="text" id="username" name="{{ form.username.html_name }}" class="logininput" required placeholder="Username" value="{{ form.username.value|default_if_none:'' }}">
+        <input type="text" id="username" name="username" class="logininput" required placeholder="Username">
         <br>
-        <input type="password" id="password1" name="{{ form.password1.html_name }}" class="logininput" required placeholder="Password" value="{{ form.password1.value|default_if_none:'' }}">
+        <input type="password" id="password" name="password" class="logininput" required placeholder="Password">
         <br>
         <button type="submit" class="loginbutton">Login</button>
     </form>
+    <!-- ... -->
 </body>
 </html>
