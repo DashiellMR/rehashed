@@ -18,15 +18,35 @@ class UserAccountForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2', 'categories')
+        fields = ('username', 'email', 'password1', 'password2', 'categories', )
 
     def save(self, commit=True):
         user = super().save(commit=False)
         if commit:
             user.save()
             categories_string = ','.join(self.cleaned_data.get('categories', []))
-            UserProfile.objects.create(user=user, categories=categories_string)
+
+        # Provide default values for all UserProfile fields
+            user_profile_data = {
+                'categories': categories_string,
+                'tearsq1': '',  # Replace with a suitable default value
+                'tearsq2': '',  # Replace with a suitable default value
+                'tearsq3': '',  # Repeat for all the fields
+                'tearsq4': '',  # Replace with a suitable default value
+                'tearsq5': '',  # Replace with a suitable default value
+                'tearsq6': '',  # Replace with a suitable default value
+                'partyq1': '',  # Replace with a suitable default value
+                'partyq2': '',  # Replace with a suitable default value
+                'partyq3': '',  # Replace with a suitable default value
+                'partyq4': '',  # Replace with a suitable default value
+                'partyq5': '',  # Replace with a suitable default value
+                'partyq6': '',  # Replace with a suitable default value
+                'date': 0,      # Replace with a suitable default value
+            }
+
+            UserProfile.objects.create(user=user, **user_profile_data)
         return user
+
 
     def clean_email(self):
         email = self.cleaned_data['email']

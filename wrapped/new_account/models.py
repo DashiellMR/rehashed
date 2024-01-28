@@ -3,19 +3,21 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    categories = models.CharField(max_length=255, blank=True)  # Stores categories as a comma-separated string
-    tearsq1 = models.CharField(max_length = 800)
-    tearsq2 = models.CharField(max_length = 800)
-    tearsq3 = models.CharField(max_length = 800)
-    tearsq4 = models.CharField(max_length = 800)
-    tearsq5 = models.CharField(max_length = 800)
-    tearsq6 = models.CharField(max_length = 800)
-    partyq1 = models.CharField(max_length = 800)
-    partyq2 = models.CharField(max_length = 800)
-    partyq3 = models.CharField(max_length = 800)
-    partyq4 = models.CharField(max_length = 800)
-    partyq5 = models.CharField(max_length = 800)
-    partyq6 = models.CharField(max_length = 800)
-    date = models.IntegerField()
+    categories = models.CharField(max_length=255, blank=True)
+    tearsq1 = models.CharField(max_length=800, blank=True, null=True)
+    tearsq2 = models.CharField(max_length=800, blank=True, null=True)
+    tearsq3 = models.CharField(max_length=800, blank=True, null=True)
+    tearsq4 = models.CharField(max_length=800, blank=True, null=True)
+    tearsq5 = models.CharField(max_length=800, blank=True, null=True)
+    tearsq6 = models.CharField(max_length=800, blank=True, null=True)
+    partyq1 = models.CharField(max_length=800, blank=True, null=True)
+    partyq2 = models.CharField(max_length=800, blank=True, null=True)
+    partyq3 = models.CharField(max_length=800, blank=True, null=True)
+    partyq4 = models.CharField(max_length=800, blank=True, null=True)
+    partyq5 = models.CharField(max_length=800, blank=True, null=True)
+    partyq6 = models.CharField(max_length=800, blank=True, null=True)
+    date = models.IntegerField(blank=True, null=True)
+
     def __str__(self):
         return self.user.username
+

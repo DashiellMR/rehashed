@@ -21,7 +21,7 @@
             <h5>Email: {{ user.email }}</h5>
             <h5>Categories: {{categories|join:", "|capfirst}}</h5>
         </div>
-        <form action="{% url 'logout' %}" method="post">
+        <form action="{% url 'login:logout' %}" method="post">
             {% csrf_token %}
             <button type="submit" class="logoutbutton">Log Out</button>
         </form>

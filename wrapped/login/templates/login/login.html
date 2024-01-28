@@ -19,7 +19,7 @@
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
-    <form method="post" class="box" action="{% url 'login' %}">
+    <form method="post" class="box" action="{% url 'login:login' %}">
         {% csrf_token %}
         <h2>Welcome Back!</h2>
         <input type="text" id="username" name="username" class="logininput" required placeholder="Username">
@@ -28,6 +28,6 @@
         <br>
         <button type="submit" class="loginbutton">Login</button>
     </form>
-    <button class="newaccountbutton" onclick="window.location.href='{% url 'register' %}'">Create New Account</button>
+    <button class="newaccountbutton" onclick="window.location.href='{% url 'new_account:register' %}'">Create New Account</button>
 </body>
 </html>
