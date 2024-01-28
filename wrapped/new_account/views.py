@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from .forms import UserAccountForm
 
 def register_account(request):
@@ -7,7 +8,7 @@ def register_account(request):
         if form.is_valid():
             form.save()
             # Redirect to the 'account' view in the 'login' app
-            return redirect('login:/login/account')  # Use 'login:account' if namespaced
+            return redirect(reverse('login:login'))  # Use 'login:account' if namespaced
         else:
             print(form.errors)  
     else:
