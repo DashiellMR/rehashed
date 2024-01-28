@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/wrapped.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="vector1"></div>
@@ -16,17 +17,29 @@
     <div class="wrapper">
         <h2>let's WRAP up {{ username }}'s life...</h2>
         <h3> Categories:</h3>
+<div>
         {% for category in categories %}
         {% if category == "tears" %}
-            <h4>You have shed {{ tears }} {{category}} today</h4>
+        <h4>Let's take a look at how many <span style="font-weight: bold; color: blue; font-size: 20px;">tears</span> you've shed this year...</h4>
+        <div class="crying">
+            <h5>Your tear ducts have been working overtime this year with <span style="font-weight: bold; color: blue;">{{ tears }}</span> cries and you have averaged <span style="font-weight: bold; color: blue;">{{ tears_average }}</span> cries.</h5>
+            <h5>You have cried an average of <span style="font-weight: bold; color: blue;">{{ tears_time_average }}</span> minutes... Yikes</h5>
+            <h5>Turns out, your favorite place to cry is in <span style="font-weight: bold; color: blue;">{{ tears_pub_or_priv }}</span> since you cried in {{ tears_pub_or_priv }} <span style="font-weight: bold; color: blue;">{{ tears_pub_or_priv_num }}</span> times.</h5>
+            <h5>Your number ONE reason for your tears has been <span style="font-weight: bold; color: blue;">{{ tears_reason }}</span>. You've cried because of {{ tears_reason }} <span style="font-weight: bold; color: blue;">{{ tears_reason_num }}</span> times!</h5>
+            <h5>On Average, you've ranked your tears this year a <span style="font-weight: bold; color: blue;">{{ tears_rank_ave }}/5</span></h5>
+            <br>
+        </div>
         {% endif %}
         {% if category == "gaming" %}
             <h4>You have been {{ category }} today</h4>
+            <br>
         {% endif %} 
         {% if category == "partying" %}
             <h4>Woo! You have been {{ category }} hard today! ({{party}} {{ category }})</h4>
+            <br>
         {% endif %} 
     {% endfor %}
+</div>
     </div>
 </body>
 </html>
