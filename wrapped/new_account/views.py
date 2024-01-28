@@ -7,8 +7,7 @@ def register_account(request):
         form = UserAccountForm(request.POST)
         if form.is_valid():
             form.save()
-            # Redirect to the 'account' view in the 'login' app
-            return redirect(reverse('login:login'))  # Use 'login:account' if namespaced
+            return redirect(reverse('login:login'))
         else:
             print(form.errors)  
     else:
