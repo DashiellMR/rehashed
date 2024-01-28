@@ -116,6 +116,10 @@ filter: blur(100px);
     color: #000000;
 }
 
+.logoutbutton{
+    
+}
+
 .wrappedbutton {
     box-sizing: border-box;
     position: absolute;
