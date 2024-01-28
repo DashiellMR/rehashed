@@ -140,7 +140,7 @@ filter: blur(100px);
     position: absolute;
     width: auto; /* Adjust as needed */
     height: auto;
-    bottom: 20%;
+    bottom: 25%;
     right: 46%;
     background: transparent; /* or remove this line */
     font-family: 'Inter';
@@ -152,5 +152,5 @@ filter: blur(100px);
     border: none; /* Remove the border */
     box-shadow: none; /* Remove the box-shadow */
     border-radius: 0; /* Remove the border-radius */
-    text-decoration: underline; /* Add underline */
+    text-decoration: none; /* Add underline */
 }
