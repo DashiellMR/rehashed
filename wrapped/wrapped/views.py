@@ -9,10 +9,11 @@ from django.contrib import messages
 def wrapped_view(request):
     user = request.user
     user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
-
+    user_tears = user_profile.tearsq1
     categories = user_profile.categories.split(',') if user_profile.categories else []
     return render(request, 'wrapped/wrapped.html', {
         'username': user.username,
         'email': user.email,
-        'categories': categories
+        'categories': categories,
+        'tears': user_tears
     })
