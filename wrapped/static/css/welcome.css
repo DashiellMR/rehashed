@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 * Login */
@@ -105,8 +106,6 @@ filter: blur(100px);
     height: 70px;
     background: hsl(0, 0%, 91%);
     border-radius: 10px;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 44px;
@@ -121,8 +120,6 @@ filter: blur(100px);
     height: 70px;
     background: hsl(0, 0%, 91%);
     border-radius: 10px;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 44px;
