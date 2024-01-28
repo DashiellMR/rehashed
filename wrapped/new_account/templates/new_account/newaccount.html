@@ -29,6 +29,9 @@
         {{ form.phone_number.label_tag }} {{ form.phone_number }}
         <br>
         <button type="submit">Create Account</button>
+        {{ form.username.errors }}
+        {{ form.email.errors }}
+        {{ form.phone_number.errors }}
     </form>
     
 </body>
