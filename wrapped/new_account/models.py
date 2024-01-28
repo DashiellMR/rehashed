@@ -14,9 +14,8 @@ class UserProfile(models.Model):
     partyq2 = models.CharField(max_length=800, blank=True, null=True)
     partyq3 = models.CharField(max_length=800, blank=True, null=True)
     partyq4 = models.CharField(max_length=800, blank=True, null=True)
-    partyq5 = models.CharField(max_length=800, blank=True, null=True)
-    partyq6 = models.CharField(max_length=800, blank=True, null=True)
-    date = models.IntegerField(blank=True, null=True)
+    gamingq1 = models.CharField(max_length=800, blank=True, null=True)
+    gamingq2 = models.CharField(max_length=800, blank=True, null=True)
 
     def __str__(self):
         return self.user.username

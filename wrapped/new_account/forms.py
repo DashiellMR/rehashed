@@ -39,9 +39,8 @@ class UserAccountForm(UserCreationForm):
                 'partyq2': '',  # Replace with a suitable default value
                 'partyq3': '',  # Replace with a suitable default value
                 'partyq4': '',  # Replace with a suitable default value
-                'partyq5': '',  # Replace with a suitable default value
-                'partyq6': '',  # Replace with a suitable default value
-                'date': 0,      # Replace with a suitable default value
+                'gamingq1': '',  # Replace with a suitable default value
+                'gamingq2': '',  # Replace with a suitable default value
             }
 
             UserProfile.objects.create(user=user, **user_profile_data)
