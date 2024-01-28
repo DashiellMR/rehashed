@@ -1,15 +1,17 @@
+import phonenumbers
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import UserProfile
+from phonenumbers import PhoneNumberMatcher, NumberParseException
 
 class UserAccountForm(UserCreationForm):
-    phone_number = forms.CharField(max_length=15, required=False)
+    phone_number = forms.CharField(max_length=17, required=True)
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
-        
+        fields = ('username', 'email', 'password1', 'password2', 'phone_number')
+    
     def save(self, commit=True):
         user = super().save(commit=False)
         phone_number = self.cleaned_data['phone_number']
@@ -32,3 +34,22 @@ class UserAccountForm(UserCreationForm):
             raise forms.ValidationError("Username is already in use.")
         return username
     
+    def clean_phone_number(self):
+        phone_number = self.cleaned_data['phone_number']
+        if phone_number:
+            try:
+                number = phonenumbers.parse(phone_number, 'US')  
+                if not phonenumbers.is_valid_number(number):
+                    raise forms.ValidationError("Enter a valid phone number.")
+            except NumberParseException:
+                raise forms.ValidationError("Enter a valid phone number.")
+        return phone_number
+    
+    def clean_password2(self):
+        password1 = self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
+
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError("Passwords don't match")
+
+        return password2
