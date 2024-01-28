@@ -1,16 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
-<body>
+<body class="login">
+    <div class="vector1"></div>
+    <div class="vector2"></div>
+    <div class="vector3"></div>
+    <div class="vector4"></div>
+    <div class="vector5"></div>
     <form method="post" class="box" action="{% url 'login' %}">
-        <h2>Login</h2>
-        <input type="text" id="username" name="{{ form.username.html_name }}" class="userinput" required placeholder="Username" value="{{ form.username.value|default_if_none:'' }}">
+        <h2>Welcome Back!</h2>
+        <input type="text" id="username" name="{{ form.username.html_name }}" class="logininput" required placeholder="Username" value="{{ form.username.value|default_if_none:'' }}">
         <br>
-        <input type="password" id="password1" name="{{ form.password1.html_name }}" class="userinput" required placeholder="Password" value="{{ form.password1.value|default_if_none:'' }}">
+        <input type="password" id="password1" name="{{ form.password1.html_name }}" class="logininput" required placeholder="Password" value="{{ form.password1.value|default_if_none:'' }}">
         <br>
         <button type="submit" class="loginbutton">Login</button>
     </form>
