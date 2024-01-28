@@ -134,3 +134,23 @@ filter: blur(100px);
     line-height: 29px;
     color: #000000;
 }
+
+.newaccountbutton {
+    box-sizing: border-box;
+    position: absolute;
+    width: auto; /* Adjust as needed */
+    height: auto;
+    bottom: 20%;
+    right: 46%;
+    background: transparent; /* or remove this line */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 29px;
+    color: blue;
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the box-shadow */
+    border-radius: 0; /* Remove the border-radius */
+    text-decoration: underline; /* Add underline */
+}
