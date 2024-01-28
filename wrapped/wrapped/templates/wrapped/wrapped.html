@@ -19,6 +19,8 @@
         {% for category in categories %}
         {% if category == "tears" %}
             <h4>You have shed {{ tears }} {{category}} today</h4>
+            <h4>You have shed an average of {{ tears_average }} {{category}} overall</h4>
+            <h4>You mostly cried in {{tears_pub_or_priv}}, {{tears_pub_or_priv_num}}times !. Good for u !</h4>
         {% endif %}
         {% if category == "gaming" %}
             <h4>You have been {{ category }} today</h4>
