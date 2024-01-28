@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+</head>
+<body class="login">
+    <div class="vector1"></div>
+    <div class="vector2"></div>
+    <div class="vector3"></div>
+    <div class="vector4"></div>
+    <div class="vector5"></div>
+    <div class="box">
+        <h1>My Account:</h1>
+        <div>
+            <h5>Username: {{ username }}</h5>
+            <h5>Email: {{ email }}</h5>
+            <!-- If categories are a list or queryset, loop through them to display -->
+            <!-- <h5>Categories Chosen:</h5>
+            {% for category in categories %}
+                <p>{{ category }}</p>
+            {% endfor %} -->
+        </div>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="logoutbutton">Log Out</button>
+        </form>
+        <button class="entrybutton">Create an Entry</button>
+        <button class="wrappedbutton">Life Wrapped</button>
+    </div>
+    <button class="entrybutton">Create an Entry</button>
+    <button class="wrappedbutton">Life Wrapped</button>
+    </div>
+</body>
+</html>
