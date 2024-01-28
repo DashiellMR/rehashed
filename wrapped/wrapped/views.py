@@ -9,18 +9,6 @@ from django.contrib import messages
 def wrapped_view(request):
     user = request.user
     user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
-   
-    #delete this later
-    number = '49'
-    user_profile.tearsq1 += ',' + number
-    user_profile.save()
-    user_profile.tearsq2 = '100'
-    user_profile.save()
-    user_profile.tearsq2 += ',' + number
-    user_profile.save()
-    user_profile.tearsq3 = 'private,public,public,public,private,public,private'
-    user_profile.save()
-    #^delete
 
     user_tears1 = user_profile.tearsq1.split(',') if user_profile.tearsq1 else []
     user_tears2 = user_profile.tearsq2.split(',') if user_profile.tearsq2 else []
