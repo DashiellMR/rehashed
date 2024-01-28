@@ -129,12 +129,14 @@ def wrapped_view(request):
     for game in user_gaming2:
         total_league.append(int(game))
 
+    max_tears = 23
+
     categories = user_profile.categories.split(',') if user_profile.categories else []
     return render(request, 'wrapped/wrapped.html', {
         'username': user.username,
         'email': user.email,
         'categories': categories,
-        'tears': max(all_tears),
+        'tears': max_tears,
         'tears_average': sum(all_tears)/length_at,
         'tears_time_average': sum(time_tears)/length_tt,
         'tears_pub_or_priv': pub_or_priv,
