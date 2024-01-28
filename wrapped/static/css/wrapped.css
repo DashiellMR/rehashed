@@ -1,6 +1,10 @@
     body {
         max-width:100%;
         overflow-x: hidden;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: #FFFFFF;
     }
     .vector1 {position: absolute;
     width: 616.61px;
@@ -66,8 +70,4 @@
     top: 416px;
     background: #D9F8F2;
     filter: blur(100px);
-    }
-
-    .background {
-        background: #FFFFFF;
     }
