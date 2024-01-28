@@ -18,6 +18,7 @@
         <div>
             <h5>Username: {{ user.username }}</h5>
             <h5>Email: {{ user.email }}</h5>
+            <h5>Categories: {{categories|join:", "|capfirst}}</h5>
         </div>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
