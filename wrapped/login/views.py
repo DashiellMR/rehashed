@@ -30,18 +30,21 @@ def login_view(request):
 
     return render(request, 'login/login.html', {'form': form})
 
+@login_required
 def accounts_view(request):
-    # You don't need a separate query if you only need basic user info like username and email
+    user = request.user
+    user_profile = UserProfile.objects.get(user=user)  # Adjust if UserProfile is accessed differently
+
+    # Split categories into a list if they exist, else provide an empty list
+    categories = user_profile.categories.split(',') if user_profile.categories else []
+    print(categories)
     return render(request, 'login/account.html', {
-        'username': request.user.username,
-        'email': request.user.email,
-        # If categories are stored in a related model, you need to fetch them
-        # Example: 'categories': request.user.profile.categories
+        'username': user.username,
+        'email': user.email,
+        'categories': categories
     })
 
 
 def success_view(request):
     return render(request, 'login/success_page.html')
 
-def accounts_view(request):
-    return render(request, 'login/account.html')
