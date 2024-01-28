@@ -67,3 +67,7 @@
     background: #D9F8F2;
     filter: blur(100px);
     }
+
+    .background {
+        background: #FFFFFF;
+    }
