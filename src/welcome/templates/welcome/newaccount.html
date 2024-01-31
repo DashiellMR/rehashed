@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/newaccount.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="account">
+    <div class="vector1"></div>
+    <div class="vector2"></div>
+    <div class="vector3"></div>
+    <div class="vector4"></div>
+    <div class="vector5"></div>
+    
+    <form method="post" class="box" action="{% url 'welcome:register' %}">
+        {% csrf_token %}
+        <div class="accountdiv">
+            <h1>New Account</h1>
+            <input type="text" id="name" name="{{ form.username.html_name }}" class="userinput" required placeholder="Username" value="{{ form.username.value|default_if_none:'' }}">
+            <br>
+            <input type="password" id="password1" name="{{ form.password1.html_name }}" class="userinput" required placeholder="Password" value="{{ form.password1.value|default_if_none:'' }}">
+            <br>
+            <input type="password" id="password2" name="{{ form.password2.html_name }}" class="userinput" required placeholder="Confirm Password" value="{{ form.password2.value|default_if_none:'' }}">
+            <br>
+            <input type="email" id="email" name="{{ form.email.html_name }}" class="userinput" required placeholder="Email" value="{{ form.email.value|default_if_none:'' }}">
+        </div>
+        <div class="categoriesdiv">
+            <h1>Select Categories</h1>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_fitness" name="categories" value="fitness" class="custom-checkbox">
+                <label for="id_categories_fitness" class="checkbox-label">Fitness</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_partying" name="categories" value="partying" class="custom-checkbox">
+                <label for="id_categories_partying" class="checkbox-label">Partying</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_cooking" name="categories" value="cooking" class="custom-checkbox">
+                <label for="id_categories_cooking" class="checkbox-label">Cooking</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_studying" name="categories" value="studying" class="custom-checkbox">
+                <label for="id_categories_studying" class="checkbox-label">Studying</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_tears" name="categories" value="tears" class="custom-checkbox">
+                <label for="id_categories_tears" class="checkbox-label">Tears</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_relationships" name="categories" value="relationships" class="custom-checkbox">
+                <label for="id_categories_relationships" class="checkbox-label">Relationships</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="id_categories_gaming" name="categories" value="gaming" class="custom-checkbox">
+                <label for="id_categories_gaming" class="checkbox-label">Gaming</label>
+            </div>
+        </div>          
+        <br>
+        <button type="submit" class="createbutton">Create Account</button>
+        {{ form.username.errors.as_text }}
+        {{ form.email.errors }}
+        {{ form.password1.errors }}
+        {{ form.password2.errors }}
+        {{ form.categories.errors }}
+    </form>
+</body>
+</html>

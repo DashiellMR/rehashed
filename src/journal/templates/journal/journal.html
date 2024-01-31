@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Form</title>  
+    <link rel="stylesheet" href="{% static 'css/journal.css' %}">
+</head>
+<body>
+    <form method="post" action="{% url 'journal:form_data' %}">
+        {% csrf_token %}
+        {% for category in categories %}
+          {% if category == "tears" %}
+          <div class="wrapper">
+            <div class="category">
+              Questions for Tears
+              <div class="form">
+                <div class="input-box">
+                  <label>How many times did you cry today?</label>
+                  <br>
+                  <input required="" placeholder="Enter a number" type="number" name="cry_times">
+                </div>
+                <div class="input-box">
+                  <label>What was the total amount of time you cried today (in minutes)?</label>
+                  <br>
+                  <input required="" placeholder="Enter a number" type="number" name="total_cry_time">
+                </div>
+                <div class="ppbox">
+                  <label>Did you mostly cry in public or in private?</label>
+                  <div class="ppoption">
+                    <div class="public-private">
+                      <input checked="" name="cry_location" id="check-public" type="radio" value="Public">
+                      <label for="check-public">Public</label>
+                    </div>
+                    <div class="public-private">
+                      <input checked="" name="cry_location" id="check-private" type="radio" value="Private">
+                      <label for="check-private">Private</label>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="reason-for-cry">
+                  <label for="cry_reason">What was the main reason for your cries?</label>
+                  <br>
+                  <select id="cry_reason" name="cry_reason">
+                    <option value="Select reason&hellip;">Select reason&hellip;</option>
+                    <option value="happy">Happy tears ftw!</option>
+                    <option value="sad">Something I watched made me cry</option>
+                    <option value="hurt">Someone hurt you :(</option>
+                    <option value="school">School is being rough and tough</option>
+                    <option value="no-reason">You cried for absolutely no reason</option>
+                  </select>
+                </div>
+      
+                <div class="rating-box">
+                  <label>How bad were your cries today?</label>
+                  <div class="rate-option">
+                    <div class="rate">
+                      <input checked="" name="cry_intensity" id="check-1" type="radio" value="1">
+                      <label for="check-1">1 - couple of tears no biggie</label>
+                    </div>
+                    <div class="rate">
+                      <input checked="" name="cry_intensity" id="check-2" type="radio" value="2">
+                      <label for="check-2">2 - okay that kind of hurt but we move on</label>
+                    </div>
+                    <div class="rate">
+                      <input checked="" name="cry_intensity" id="check-3" type="radio" value="3">
+                      <label for="check-3">3 - some tissues were needed</label>
+                    </div>
+                    <div class="rate">
+                      <input checked="" name="cry_intensity" id="check-4" type="radio" value="4">
+                      <label for="check-4">4 - the snotty, painful type of cry</label>
+                    </div>
+                    <div class="rate">
+                      <input checked="" name="cry_intensity" id="check-5" type="radio" value="5">
+                      <label for="check-5">5 - screaming, crying, and throwing up</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <label>How many people watched you cry LOL?</label>
+                  <br>
+                  <input required="" placeholder="Enter a number" type="number" name="watched_you_cry">
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if category == "partying" %}
+<div class="wrapper2">
+    <div class="category">
+        Questions for Partying
+        <div class="form">
+            <div class="input-box">
+                <label>How many times did you party today?</label>
+                <br>
+                <input required="" placeholder="Enter a number" type="number" name="party_cry_times"> <!-- Add name attribute -->
+            </div>
+            <div class="input-box">
+                <label>What was the total amount of drinks you had?</label>
+                <br>
+                <input required="" placeholder="Enter a number" type="number" name="party_total_drinks"> <!-- Add name attribute -->
+            </div>
+            <div class="ppbox">
+                <label>Where was the party?</label>
+                <div class="ppoption">
+                    <div class="location">
+                        <input checked="" name="party_location" id="check-frat" type="radio"> <!-- Add name attribute -->
+                        <label for="check-frat">Frat House</label>
+                    </div>
+                    <div class="location">
+                        <input checked="" name="party_location" id="check-club" type="radio"> <!-- Add name attribute -->
+                        <label for="check-club">Club</label>
+                    </div>
+                    <div class="location">
+                        <input checked="" name="party_location" id="check-house" type="radio"> <!-- Add name attribute -->
+                        <label for="check-house">House Party</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reason-for-party">
+                <label for="party_reason">What was the main reason for your partying?</label> <!-- Add name attribute -->
+                <br>
+                <select id="party_reason" name="party_reason"> <!-- Add name attribute -->
+                    <option value="reasons">Select reason&hellip;</option>
+                    <option value="happy">Ceeeelleebrate good times c'mon!</option>
+                    <option value="sad">Needed to party out the pain</option>
+                    <option value="hurt">You were peer-pressured to going out</option>
+                    <option value="school">Drink to forget about school</option>
+                    <option value="no-reason">You partied for absolutely no reason</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+        {% endfor %}
+        <div id="submit-btn">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+</body>
+</html>
