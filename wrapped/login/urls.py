@@ -8,5 +8,4 @@ urlpatterns = [
     path("success/", success_view, name='success_page'),
     path("account/", accounts_view, name='account'),
     path('logout/', LogoutView.as_view(next_page=reverse_lazy('login:login')), name='logout')
-    # ... other URL patterns ...
 ]

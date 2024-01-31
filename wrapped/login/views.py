@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from new_account.models import UserProfile
+from welcome.models import UserProfile
 from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
 

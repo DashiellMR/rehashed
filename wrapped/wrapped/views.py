@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from new_account.models import UserProfile
+from welcome.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect

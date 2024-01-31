@@ -15,7 +15,7 @@
     <div class="vector4"></div>
     <div class="vector5"></div>
     
-    <form method="post" class="box" action="{% url 'new_account:register' %}">
+    <form method="post" class="box" action="{% url 'welcome:register' %}">
         {% csrf_token %}
         <div class="accountdiv">
             <h1>New Account</h1>
