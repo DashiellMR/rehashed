@@ -23,8 +23,6 @@ def register_account(request):
     return render(request, 'welcome/newaccount.html', {'form': form})
 
 
-def success(request):
-    return render(request, 'welcome/success.html')
 
 def login_view(request):
     if request.method == 'POST':
@@ -63,5 +61,3 @@ def accounts_view(request):
     })
 
 
-def success_view(request):
-    return render(request, 'welcome/success_page.html')
