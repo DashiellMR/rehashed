@@ -7,20 +7,20 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
 def welcome_page(request):
-    return render(request, 'welcome/welcome.html')
+    return render(request, 'account/welcome.html')
 
 def register_account(request):
     if request.method == 'POST':
         form = UserAccountForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('login:login'))
+            return redirect(reverse('account:login'))
         else:
             print(form.errors)  
     else:
         form = UserAccountForm()
 
-    return render(request, 'welcome/newaccount.html', {'form': form})
+    return render(request, 'account/register.html', {'form': form})
 
 
 
@@ -38,7 +38,7 @@ def login_view(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('welcome:account')
+                return redirect('account:account')
             else:
                 messages.error(request, "Username or password is not correct.")
         else:
@@ -46,7 +46,7 @@ def login_view(request):
     else:
         form = LoginForm()
 
-    return render(request, 'welcome/login.html', {'form': form})
+    return render(request, 'account/login.html', {'form': form})
 
 @login_required
 def accounts_view(request):
@@ -54,7 +54,7 @@ def accounts_view(request):
     user_profile = get_object_or_404(UserProfile, user=user)
 
     categories = user_profile.categories.split(',') if user_profile.categories else []
-    return render(request, 'welcome/account.html', {
+    return render(request, 'account/account.html', {
         'username': user.username,
         'email': user.email,
         'categories': categories

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from welcome.models import UserProfile
+from account.models import UserProfile
 
 CATEGORY_CHOICES = [
     ('fitness', 'Fitness'),

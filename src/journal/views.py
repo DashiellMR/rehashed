@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from welcome.models import UserProfile
+from account.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
@@ -60,7 +60,7 @@ def form_data(request):
         user_profile.save()
         
         # You can redirect the user to another page after saving the data
-        return redirect('welcome:account')  # Replace 'some_success_page' with the actual URL
+        return redirect('account:account')  # Replace 'some_success_page' with the actual URL
 
 @login_required
 def wrapped_view(request):
