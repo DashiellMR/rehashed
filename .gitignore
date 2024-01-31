@@ -1,0 +1,5 @@
+# Database files 
+src/db.sqlite3
+
+# Apple files
+.DS_Store
