@@ -19,7 +19,7 @@
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
-    <form method="post" class="box" action="{% url 'login:login' %}">
+    <form method="post" class="box" action="{% url 'welcome:login' %}">
         {% csrf_token %}
         <h2>Welcome!</h2>
         <input type="text" id="username" name="username" class="logininput" required placeholder="Username">

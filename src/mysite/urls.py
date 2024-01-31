@@ -6,6 +6,6 @@ urlpatterns = [
     path('', include('welcome.urls')),
     path("new_account/", include("welcome.urls")),
     path("wrapped/", include("wrapped.urls")),
-    path("login/", include("login.urls")),
+    path("login/", include("welcome.urls")),
     path("journal/", include("journal.urls"))
 ]
